@@ -25,14 +25,17 @@
 
                 <div class="the-menus">
                     <div class="the-secondary-menu">
-                        <nav>
-                            <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'secondary',
-                                'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
-                            ));
-                            ?>
-                        </nav>
+                        <div class="secondary-wrapper">
+                            <nav>
+                                <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'secondary',
+                                    'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
+                                ));
+                                ?>
+                            </nav>
+                        </div>
+
                     </div>
                     <div class="the-primary-menu">
                         <nav>
@@ -43,6 +46,9 @@
                             ));
                             ?>
                         </nav>
+                        <div class="donate-btn">
+                            <a href="">Donate</a>
+                        </div>
                     </div>
 
                 </div>

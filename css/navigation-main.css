@@ -3,6 +3,7 @@
   --white: #fff;
   --green: #025f33;
   --pink: #e70a74;
+  --grey: #ececec;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
@@ -18,7 +19,49 @@
   align-items: center;
 }
 
-.the-primary-menu li:last-child a {
+#mega-menu-wrap-primary #mega-menu-primary {
+  padding: 25px 0px 0px 0px !important;
+}
+
+#mega-menu-wrap-primary
+  #mega-menu-primary
+  > li.mega-menu-item
+  > a.mega-menu-link {
+  padding: 15px 20px !important;
+}
+
+/* .the-primary-menu li:last-child a {
   background: var(--pink) !important;
   color: var(--white) !important;
+  border-radius: 5px !important;
+  position: relative !important;
+} */
+
+.the-primary-menu {
+  display: flex;
+  align-items: baseline;
+}
+
+.donate-btn a {
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 15px 50px 15px 25px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  position: relative;
+}
+
+.donate-btn a::after {
+  content: "\e80f";
+  position: absolute;
+  font-family: nicons;
+  top: 12px;
+  right: 23px;
+}
+.the-secondary-menu {
+  display: flex;
+  justify-content: end;
+}
+.secondary-wrapper {
+  border-bottom: 2px solid var(--grey);
 }
