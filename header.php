@@ -16,39 +16,37 @@
 
     <div class="container-fluid for-header">
         <div class="container">
-            <div class="row">
-                <div class="mst-flex">
-                    <div class="logo">
-                        <a href="<?php echo home_url(); ?>">
-                            <img class="black-logo" alt="Outrisk Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/css/img/nango_logo.png" />
-                        </a>
+            <div class="mst-flex">
+                <div class="logo">
+                    <a href="<?php echo home_url(); ?>">
+                        <img class="black-logo" alt="Outrisk Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/css/img/nango_logo.png" />
+                    </a>
+                </div>
+
+                <div class="the-menus">
+                    <div class="the-secondary-menu">
+                        <nav>
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'secondary',
+                                'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
+                            ));
+                            ?>
+                        </nav>
                     </div>
-                    <div class="buttons-search-menu">
-
-                        <div class="srch">
-                            <li class="search_icon"><a class="search-trigger" href="#"><span></span></a></li>
-
-                            <div id="search" class="search">
-
-                            </div>
-
-                        </div>
-
-                        <div class="the-mnu">
-                            <nav>
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'primary',
-                                    'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
-                                ));
-                                ?>
-                            </nav>
-                        </div>
+                    <div class="the-primary-menu">
+                        <nav>
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary',
+                                'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
+                            ));
+                            ?>
+                        </nav>
                     </div>
 
                 </div>
-
-
             </div>
+
         </div>
     </div>
