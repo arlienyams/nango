@@ -17,3 +17,8 @@
   gap: 10px;
   align-items: center;
 }
+
+.the-primary-menu li:last-child a {
+  background: var(--pink) !important;
+  color: var(--white) !important;
+}
