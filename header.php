@@ -19,21 +19,12 @@
             <div class="row">
                 <div class="mst-flex">
                     <div class="logo">
-                        <div class="log">
-                            <a href="<?php echo home_url(); ?>">
-                                <img class="black-logo" alt="Outrisk Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/css/img/nango_logo.png" />
-                            </a>
-                        </div>
+                        <a href="<?php echo home_url(); ?>">
+                            <img class="black-logo" alt="Outrisk Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/css/img/nango_logo.png" />
+                        </a>
                     </div>
                     <div class="buttons-search-menu">
-                        <div class="top-btns">
-                            <div class="b-one">
-                                <a href="claim">Claim</a>
-                            </div>
-                            <div class="btwo">
-                                <a href="get-a-quote">Get Quote</a>
-                            </div>
-                        </div>
+
                         <div class="srch">
                             <li class="search_icon"><a class="search-trigger" href="#"><span></span></a></li>
 

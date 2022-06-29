@@ -70,9 +70,10 @@ add_action('wp_enqueue_scripts', 'nango_scripts');
  ************************************/
 register_nav_menus(array(
 	'primary' => __('Primary Menu'),
-	'products' => __('Products Menu'),
-	'company' => __('Company Menu'),
-	'legal' => __('Legal Menu'),
+	'secondary' => __('Secondary Menu'),
+	'what-we-do' => __('What We Do Menu'),
+	'quick-links' => __('Quick Links Menu'),
+	'related-links' => __('Related Links Menu'),
 ));
 
 
