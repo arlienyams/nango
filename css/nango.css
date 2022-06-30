@@ -384,42 +384,25 @@ a img:hover {
 
 /*---------*/
 
-/*Slider Area*/
-.other-g-img {
-  width: 50px;
-  height: auto;
-}
+/* **************************
+      SLIDER
+**************************** */
 
-.google-rev {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  align-items: center;
+.owl-carousel {
+  display: block !important;
 }
 
 #homeSlider {
   position: relative;
 }
 
-.the-sign-up {
-  position: absolute;
-  bottom: 9%;
-  margin-right: 5%;
-}
-
-.buttons-search-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3em;
+.item.slider-img {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 700px) {
-  .buttons-search-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0em;
-  }
-
   #homeSlider .owl-nav.disabled {
     display: none;
   }
@@ -430,38 +413,8 @@ a img:hover {
   }
 }
 
-.fix-the-caption {
-  position: absolute;
-  top: 32vh;
-  color: var(--the-white);
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 #homeSlider img {
   position: relative;
   height: 100vh;
   object-fit: cover;
-}
-
-@media (min-width: 700px) {
-  .the-sign-up {
-    position: absolute;
-    bottom: 30%;
-  }
-
-  .fix-the-caption {
-    position: absolute;
-    top: 30vh;
-    color: var(--the-white);
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  #homeSlider img {
-    position: relative;
-    height: 100vh;
-  }
 }
