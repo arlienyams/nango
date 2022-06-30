@@ -388,9 +388,9 @@ a img:hover {
       SLIDER
 **************************** */
 
-.owl-carousel {
+/* .owl-carousel {
   display: block !important;
-}
+} */
 
 #homeSlider {
   position: relative;

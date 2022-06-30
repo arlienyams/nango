@@ -17,7 +17,7 @@
 
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12">
                     <div class="the-footer-menu">
                         <div class="products">
                             <h5>Products</h5>
@@ -111,6 +111,7 @@
         })
     })
     console.log()
+
 </script>
 
 </body>
