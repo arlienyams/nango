@@ -23,20 +23,6 @@
   padding: 25px 0px 0px 0px !important;
 }
 
-#mega-menu-wrap-primary
-  #mega-menu-primary
-  > li.mega-menu-item
-  > a.mega-menu-link {
-  padding: 15px 20px !important;
-}
-
-/* .the-primary-menu li:last-child a {
-  background: var(--pink) !important;
-  color: var(--white) !important;
-  border-radius: 5px !important;
-  position: relative !important;
-} */
-
 .the-primary-menu {
   display: flex;
   align-items: baseline;

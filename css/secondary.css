@@ -9,8 +9,185 @@
 
 /*-------*/
 
+/*Events*/
+.the-events-holder {
+    position: relative;
+}
+
+.the-events-holder::after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid var(--grey);
+    width: 100%;
+    bottom: -17px;
+}
+
+.events-t-tle a {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.the-events-date p {
+    color: var(--green);
+}
+
+.the-time::before {
+    content: "\e80b";
+    font-family: "nicons";
+    font-size: 2.5em;
+    position: relative;
+    top: -19px;
+}
+
+.the-location::before {
+    content: "\e812";
+    font-family: "nicons";
+    font-size: 2.5em;
+    position: relative;
+    top: -19px;
+}
+
+.the-location {
+    position: relative;
+    display: flex;
+    gap: 8px;
+}
+
+.the-time {
+    display: flex;
+    gap: 6px;
+    position: relative;
+}
+
+.e-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+@media(min-width: 900px) {
+    .second-events-flex {
+        flex-basis: 65%;
+    }
+
+    .first-event-flex {
+        flex-basis: 31%;
+    }
+}
+
+/*-------*/
+
+
+/*Share Links Area above footer*/
+@media(min-width: 1000px) {
+    .share-links-are a {
+        width: 30%;
+    }
+
+}
+
+.share-links-are {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: space-between;
+    margin-bottom: 7em;
+}
+
+.share-links-are h5 {
+    position: relative;
+    font-weight: 600;
+    margin-top: 2em;
+}
+
+.the-share h5::before {
+    content: "\e801";
+    font-family: "nicons";
+    position: absolute;
+    top: -50px;
+    font-size: 1.5em;
+}
+
+.the-faqs-tag h5::before {
+    content: "\e80e";
+    font-family: "nicons";
+    position: absolute;
+    top: -50px;
+    font-size: 1.5em;
+}
+
+.the-whats-app-tag h5::before {
+    content: "\e807";
+    font-family: "nicons";
+    position: absolute;
+    top: -50px;
+    font-size: 1.5em;
+}
+
+.share-links-are a {
+    box-shadow: #ddd 0px 2px 8px;
+    padding: 35px;
+    transition: 500ms;
+}
+
+/*-----------------------------*/
+
 
 /*Footer Code*/
+.the-em {
+    height: 3em;
+    padding: 25px;
+    border: 1px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    border-radius: 5px;
+    width: 300px;
+}
+
+.the-submit {
+    background: var(--white);
+    border: none;
+    height: 3em;
+    width: 190px;
+    border-radius: 5px;
+}
+
+.news-letter-flex h5 {
+    display: block;
+    width: 100%;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.news-letter-flex {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.scial h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.scial a {
+    color: var(--white);
+    font-size: 1.4em;
+}
+
+.the-middle-flex {
+    display: flex;
+    gap: 5em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4em 0px;
+}
+
 .fluid-container.for-footer {
     background: var(--black);
 }

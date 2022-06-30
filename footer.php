@@ -4,19 +4,21 @@
         <div class="footer-middle">
             <div class="row">
                 <div class="col-sm-12">
+                    <div class="the-middle-flex">
+                        <div class="news-l">
+                            <?php echo do_shortcode('[mc4wp_form id="42"]'); ?>
+                        </div>
 
-                    <div class="news-l">
-                        <?php echo do_shortcode('[mc4wp_form id="42"]'); ?>
+                        <div class="scial">
+                            <h5>Connect with us</h5>
+                            <a href="" class="facebook"><i class="icon-facebook_icon"></i></a>
+                            <a href="" class="twitter"><i class="icon-twitter_icon"></i></a>
+                            <a href="" class="instagram"><i class="icon-instagram_icon"></i></a>
+                            <a href="" class="linkedin"><i class="icon-linkedin_icon"></i></a>
+                            <a href="" class="youtube"><i class="icon-youtube_icon"></i></a>
+                        </div>
+
                     </div>
-
-                    <div class="scial">
-                        <a href="" class="facebook"><i class="icon-iconmonstr-facebook-5"></i></a>
-                        <a href="" class="twitter"><i class="icon-iconmonstr-twitter-5"></i></a>
-                        <a href="" class="linkedin"><i class="icon-iconmonstr-linkedin-5"></i></a>
-                        <a href="" class="youtube"><i class="icon-iconmonstr-youtube-10"></i></a>
-                    </div>
-
-
 
 
                 </div>

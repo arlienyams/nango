@@ -157,7 +157,7 @@ add_action('init', 'nango_slider_post_type');
 function contact_details_post_type()
 {
 	register_post_type(
-		'Cotact Details',
+		'contact-details',
 		array(
 			'labels' => array(
 				'name' => __('Contact Details'),
@@ -182,3 +182,36 @@ function contact_details_post_type()
 	);
 }
 add_action('init', 'contact_details_post_type');
+
+
+/************************************
+	Events Post Type
+ ************************************/
+function events_post_type()
+{
+	register_post_type(
+		'Events',
+		array(
+			'labels' => array(
+				'name' => __('Events'),
+				'singular_name' => __('Events'),
+				'add_new_item' => 'Add New Event',
+				'add_new' => __('Add New Event'),
+				'attributes' => __('Events Attributes', 'text_domain'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'events'
+			),
+			'supports' => array(
+				'title',
+				//'thumbnail'
+				'custom-fields'
+			),
+			'menu_position' => 5,
+			'menu_icon' => __('dashicons-controls-repeat')
+		)
+	);
+}
+add_action('init', 'events_post_type');

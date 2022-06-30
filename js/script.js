@@ -31,12 +31,13 @@ jQuery(document).ready(function ($) {
         // SLIDER/S OPTIONS
         $('#homeSlider').owlCarousel({
             loop: true,
-            autoplay: 10000,
+            // autoplay: 10000,
             lazyLoad: true,
             animateOut: 'fadeOut',
-            autoplayTimeout: 10000,
+            // autoplayTimeout: 10000,
             smartSpeed: 1000,
-            dots: true,
+            dots: false,
+            navigation: false,
             items: 1,
             responsiveClass: true,
             responsive: {
