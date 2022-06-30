@@ -1,10 +1,57 @@
 :root {
-  --black: #000000;
-  --white: #fff;
-  --green: #025f33;
-  --pink: #e70a74;
+    --black: #000000;
+    --white: #fff;
+    --green: #025f33;
+    --pink: #e70a74;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
 
 /*-------*/
+
+
+/*Footer Code*/
+.fluid-container.for-footer {
+    background: var(--black);
+}
+
+.the-footer-menu a {
+    color: var(--white);
+    line-height: 2;
+}
+
+.the-footer-menu h5 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.designed p {
+    color: var(--white);
+    margin-top: 3em;
+    position: relative;
+}
+
+.done-by {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.done-by::after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid var(--white);
+    width: 100%;
+    top: 27px;
+}
+
+.the-footer-menu {
+    display: flex;
+    gap: 4em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*-----------*/

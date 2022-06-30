@@ -3,19 +3,22 @@
 
         <div class="footer-middle">
             <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <div class="f-logo-social-icons">
-                        <div class="thef-lgo">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/./css/img/outriskrlogo white.png" alt="">
-                        </div>
-                        <div class="scial">
-                            <a href="" class="facebook"><i class="icon-iconmonstr-facebook-5"></i></a>
-                            <a href="" class="twitter"><i class="icon-iconmonstr-twitter-5"></i></a>
-                            <a href="" class="linkedin"><i class="icon-iconmonstr-linkedin-5"></i></a>
-                            <a href="" class="youtube"><i class="icon-iconmonstr-youtube-10"></i></a>
-                        </div>
+                <div class="col-sm-12">
 
+                    <div class="news-l">
+                        <?php echo do_shortcode('[mc4wp_form id="42"]'); ?>
                     </div>
+
+                    <div class="scial">
+                        <a href="" class="facebook"><i class="icon-iconmonstr-facebook-5"></i></a>
+                        <a href="" class="twitter"><i class="icon-iconmonstr-twitter-5"></i></a>
+                        <a href="" class="linkedin"><i class="icon-iconmonstr-linkedin-5"></i></a>
+                        <a href="" class="youtube"><i class="icon-iconmonstr-youtube-10"></i></a>
+                    </div>
+
+
+
+
                 </div>
                 <div class="col-sm-12">
                     <div class="the-footer-menu">
@@ -59,7 +62,7 @@
 
 
         <div class="designed">
-            <div class="row done-by">
+            <div class="done-by">
                 <div class="copy-right-area">
                     <p>Copyright &copy; <?php echo date("Y"); ?> Nango. All rights reserved. </p>
                 </div>
