@@ -3,6 +3,7 @@
   --white: #fff;
   --green: #025f33;
   --pink: #e70a74;
+  --body-gray: #fafafa;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
@@ -134,6 +135,10 @@ li {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background: var(--body-gray);
+}
+
 body.home.page-template-default.page.page-id-15.mega-menu-primary {
   overflow-x: hidden;
 }
@@ -151,8 +156,8 @@ h2 {
   color: var(--green);
   font-weight: 400;
   font-size: 2.8em;
+  margin-bottom: 30px;
 }
-
 h3 {
   position: relative;
   font-size: 1.75rem;
@@ -584,4 +589,111 @@ a img:hover {
 .social-media a {
   color: var(--white);
   font-size: 20px;
+}
+
+/* ********************************
+              NEWS
+******************************** */
+
+.latest-news {
+  background: var(--white);
+  padding: 50px 0 80px;
+}
+
+.news-holder {
+  box-shadow: 0px 0px 3px 0px rgba(221, 221, 221, 1);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(208, 208, 208, 0.7);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.7);
+  border-radius: 7px 7px 0 0;
+}
+
+.news-image img {
+  height: 200px;
+  border-radius: 7px 7px 0 0;
+}
+
+.news-title {
+  padding: 10px;
+}
+
+.news-title a {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.news-title {
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  height: 170px;
+}
+
+.news-button {
+  padding: 10px;
+}
+
+.news-button a {
+  color: var(--green);
+  font-size: 1.5em;
+}
+
+.latest-btn {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* *********************************
+        BUTTONS
+********************************** */
+
+.btn a {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  padding: 15px 60px;
+  border-radius: 5px;
+  font-size: 1.3em;
+}
+
+/* ****************************
+    What we Do
+****************************** */
+
+.we-do {
+  padding: 60px 0;
+}
+
+.we-do h2 {
+  text-align: center;
+}
+
+.we-wrapper {
+  box-shadow: #eceaea 0px 2px 8px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  background: var(--white);
+}
+
+.we-wrapper h5 {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: 60px;
+}
+
+.news-cat a {
+  color: var(--green);
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.news-cat {
+  padding: 25px 10px 0;
 }

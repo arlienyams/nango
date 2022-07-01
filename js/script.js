@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
             }
         })
 
-        $('#portfoliosSlider').owlCarousel({
+        $('#thematicSectorSlider').owlCarousel({
             loop: true,
             autoplay: false,
             dots: true,
@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
             responsiveClass: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 4
                 }
             }
         })

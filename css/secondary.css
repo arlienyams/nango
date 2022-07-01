@@ -9,9 +9,22 @@
 
 /*-------*/
 
+/*Thematic Sector*/
+
+.port-img {
+    width: 400px;
+    height: 200px;
+}
+
+/**/
 /*Events*/
 .the-events-holder {
     position: relative;
+}
+
+.share-links-are a:hover {
+    background: var(--black);
+    color: var(--white);
 }
 
 .the-events-holder::after {

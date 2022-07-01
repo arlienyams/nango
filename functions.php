@@ -151,6 +151,74 @@ function nango_slider_post_type()
 }
 add_action('init', 'nango_slider_post_type');
 
+
+
+/************************************
+	What we Do Post Type
+ ************************************/
+function we_do_post_type()
+{
+	register_post_type(
+		'we_do',
+		array(
+			'labels' => array(
+				'name' => __('What we do'),
+				'singular_name' => __('What we do'),
+				'add_new_item' => 'Add New things we do',
+				'add_new' => __('Add New things we do'),
+				'attributes' => __('What we do Attributes', 'text_domain'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'what-we-do'
+			),
+			'supports' => array(
+				//'title',
+				//'thumbnail'
+				// 'custom-fields'
+			),
+			'menu_position' => 5,
+			'menu_icon' => __('dashicons-editor-expand')
+		)
+	);
+}
+add_action('init', 'we_do_post_type');
+
+/************************************
+	Current Programmes Post Type
+ ************************************/
+function current_programmes_post_type()
+{
+	register_post_type(
+		'current_programmes',
+		array(
+			'labels' => array(
+				'name' => __('Programmes'),
+				'singular_name' => __('Programmes'),
+				'add_new_item' => 'Add New Programmes',
+				'add_new' => __('Add New Programmes'),
+				'attributes' => __('Programmes Attributes', 'text_domain'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'current_programmes'
+			),
+			'supports' => array(
+				'title',
+				'thumbnail'
+				// 'custom-fields'
+			),
+			'menu_position' => 6,
+			'menu_icon' => __('dashicons-portfolio')
+		)
+	);
+}
+add_action('init', 'current_programmes_post_type');
+
+
+
 /************************************
 	Contact-details Post Type
  ************************************/
@@ -215,3 +283,86 @@ function events_post_type()
 	);
 }
 add_action('init', 'events_post_type');
+
+
+/************************************
+	Thematic Sector Post Type
+ ************************************/
+
+function cptui_register_my_cpts_thematic_sector()
+{
+
+	/**
+	 * Post Type: thematic secror type.
+	 */
+
+	$labels = array(
+		"name" => __("Thematic Sector", "custom-post-type-ui"),
+		"singular_name" => __("thematic sector", "custom-post-type-ui"),
+	);
+
+	$args = array(
+		"label" => __("thematic-sector", "custom-post-type-ui"),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"delete_with_user" => false,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => true,
+		"rewrite" => array("slug" => "thematic-sector", "with_front" => true),
+		"query_var" => true,
+		"supports" => array("title"),
+		"taxonomies" => array("thematic_sector_type"),
+		'menu_icon' => __('dashicons-businessperson'),
+	);
+
+	register_post_type("thematic_sector", $args);
+}
+
+add_action('init', 'cptui_register_my_cpts_thematic_sector');
+
+
+
+
+function cptui_register_my_taxes()
+{
+
+	/**
+	 * Taxonomy: Personal Insurance Type.
+	 */
+
+	$labels = array(
+		"name" => __("Thematic Sector Type", "custom-post-type-ui"),
+		"singular_name" => __("thematic sector type", "custom-post-type-ui"),
+	);
+
+	$args = array(
+		"label" => __("Thematic Sector Type", "custom-post-type-ui"),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array('slug' => 'thematic_sector_type', 'with_front' => true,),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "thematic_sector_type",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+	);
+	register_taxonomy("thematic_sector_type", array("thematic_sector"), $args);
+}
+add_action('init', 'cptui_register_my_taxes');
