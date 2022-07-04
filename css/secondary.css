@@ -11,13 +11,152 @@
 
 /*Thematic Sector*/
 
-.port-img {
-    width: 400px;
-    height: 200px;
+.thematicslider-container .owl-item:not(.active) + .owl-item.active .the-overlay {
+    opacity: 0;
 }
 
-/**/
+.thematicslider-container .owl-item:not(.active) + .owl-item.active .port-img img {
+    filter: brightness(50%);
+    z-index: -1 !important;
+    position: relative;
+}
+
+.thematicslider-container .owl-item:not(.active) + .owl-item.active .thematic-title p {
+    color: var(--white);
+}
+
+.thematicslider-container .owl-item:not(.active) + .owl-item.active .the-dot {
+    background: var(--white);
+}
+
+.the-overlay {
+    position: relative;
+    transition: 900ms
+}
+
+
+.the-overlay::after {
+    content: "";
+    position: absolute;
+    background: var(--white);
+    width: 376px;
+    height: 210px;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+    transition: 900ms ease-in-out;
+    z-index: 1;
+}
+
+.thematic-holder .port-img img {
+    filter: brightness(50%);
+
+}
+
+.thematic-holder:hover .port-img img {
+    filter: brightness(50%);
+    position: relative;
+    z-index: -1;
+}
+
+.thematic-holder:hover .the-overlay::after {
+    opacity: 0;
+    transition: 900ms ease-in-out;
+    color: var(--white);
+}
+
+.thematic-holder:hover p {
+    color: var(--white);
+    transition: 900ms ease-in-out
+}
+
+.thematic-holder:hover .the-dot {
+    background: var(--white);
+    transition: 900ms ease-in-out
+}
+
+.thematicslider-container {
+    width: 100%;
+    margin-left: 6%;
+}
+
+
+.thematic-title {
+    position: absolute;
+    top: 50%;
+    left: 38px;
+    z-index: 9;
+}
+
+.thematic-holder {
+    margin: 10px;
+    box-shadow: #eceaea 0px 2px 8px;
+}
+
+.thematic-holder img {
+    height: 210px;
+}
+
+.the-dot {
+    background: var(--green);
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 75px;
+    left: 35px;
+    z-index: 9;
+}
+
+.thematic-title p {
+    font-size: 2.1em;
+}
+
+#thematicSectorSlider .owl-nav.disabled {
+    display: flex;
+    gap: 20px;
+    margin: 4em 0px;
+}
+
+#thematicSectorSlider .owl-prev span,
+#thematicSectorSlider .owl-next span {
+    display: none;
+}
+
+#testimonialSlider .owl-prev span,
+#testimonialSlider .owl-next span {
+    display: none;
+}
+
+#thematicSectorSlider .owl-next::after,
+#testimonialSlider .owl-next::after {
+    content: "\e803";
+    font-family: "nicons";
+    background: var(--white);
+    padding: 20px;
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 7px;
+}
+
+#testimonialSlider .owl-nav.disabled {
+    display: flex;
+    gap: 15px;
+}
+
+#thematicSectorSlider .owl-prev::before,
+#testimonialSlider .owl-prev::before {
+    content: "\e809";
+    font-family: "nicons";
+    background: var(--green);
+    padding: 20px;
+    color: var(--white);
+    border: 1px solid var(--green);
+    border-radius: 7px;
+}
+
 /*Events*/
+
 .the-events-holder {
     position: relative;
 }
@@ -148,7 +287,31 @@
 }
 
 /*-----------------------------*/
+/*Testimonial*/
+.test-holder {
+    margin-bottom: 3em;
+}
 
+.test-holder {
+    background: var(--green);
+    padding: 20px;
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.test-wrapper {
+    margin: 5px;
+}
+
+.testimonial {
+    margin-bottom: 4em;
+}
+
+.testimony-giver p {
+    font-style: italic;
+}
+
+/**/
 
 /*Footer Code*/
 .the-em {
@@ -242,6 +405,38 @@
     gap: 4em;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media(min-width: 600px) {
+    .container-fluid.for-header {
+        background: var(--white);
+        position: relative;
+        z-index: 9;
+    }
+
+    .the-body-content {
+        position: relative;
+        margin-bottom: 100%;
+        z-index: 2;
+        background: var(--grey);
+    }
+
+    .fluid-container.for-footer {
+        position: fixed;
+        z-index: 0 !important;
+        width: 100%;
+        bottom: 95px;
+        height: 100%;
+    }
+
+    .designed {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background: var(--black);
+        left: 0;
+    }
+
 }
 
 /*-----------*/

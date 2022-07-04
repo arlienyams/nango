@@ -366,3 +366,29 @@ function cptui_register_my_taxes()
 	register_taxonomy("thematic_sector_type", array("thematic_sector"), $args);
 }
 add_action('init', 'cptui_register_my_taxes');
+
+
+/*------------Testimonials----------------*/
+function testimonial_post_type() {
+	register_post_type( 'testimonial',
+		array(
+			'labels' => array(
+				'name' => __( 'Testimonials' ),
+				'singular_name' => __( 'Testimonial' ),
+				'add_new_item' => 'Add Testimonial',
+				'add_new' => __('Add Testimonial')
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'testimonial'
+			),
+			'supports' => array(
+				'title'
+			),
+			'menu_position' => 5,
+			'menu_icon' => __('dashicons-format-quote')
+		)
+	);
+}
+add_action( 'init', 'testimonial_post_type' );

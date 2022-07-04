@@ -19,6 +19,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -67,61 +68,99 @@
 
 .icon-iconmonstr-email-1-2-1:before {
   content: "\e800";
-} /* '' */
+}
+
+/* '' */
 .icon-share_icon:before {
   content: "\e801";
-} /* '' */
+}
+
+/* '' */
 .icon-iconmonstr-smartphone-1-1:before {
   content: "\e802";
-} /* '' */
+}
+
+/* '' */
 .icon-next_icon:before {
   content: "\e803";
-} /* '' */
+}
+
+/* '' */
 .icon-search_icon:before {
   content: "\e804";
-} /* '' */
+}
+
+/* '' */
 .icon-right-big:before {
   content: "\e805";
-} /* '' */
+}
+
+/* '' */
 .icon-twitter_icon:before {
   content: "\e806";
-} /* '' */
+}
+
+/* '' */
 .icon-whatsapp_icon:before {
   content: "\e807";
-} /* '' */
+}
+
+/* '' */
 .icon-youtube_icon:before {
   content: "\e808";
-} /* '' */
+}
+
+/* '' */
 .icon-back_icon:before {
   content: "\e809";
-} /* '' */
+}
+
+/* '' */
 .icon-chatbot_icon:before {
   content: "\e80a";
-} /* '' */
+}
+
+/* '' */
 .icon-clock_icon:before {
   content: "\e80b";
-} /* '' */
+}
+
+/* '' */
 .icon-close_icon:before {
   content: "\e80c";
-} /* '' */
+}
+
+/* '' */
 .icon-facebook_icon:before {
   content: "\e80d";
-} /* '' */
+}
+
+/* '' */
 .icon-faqs_icon:before {
   content: "\e80e";
-} /* '' */
+}
+
+/* '' */
 .icon-heart_icon:before {
   content: "\e80f";
-} /* '' */
+}
+
+/* '' */
 .icon-instagram_icon:before {
   content: "\e810";
-} /* '' */
+}
+
+/* '' */
 .icon-linkedin_icon:before {
   content: "\e811";
-} /* '' */
+}
+
+/* '' */
 .icon-location_icon:before {
   content: "\e812";
-} /* '' */
+}
+
+/* '' */
 
 /*------------------------------------------------------------*/
 html,
@@ -158,6 +197,7 @@ h2 {
   font-size: 2.8em;
   margin-bottom: 30px;
 }
+
 h3 {
   position: relative;
   font-size: 1.75rem;
@@ -250,20 +290,14 @@ a img:hover {
   transform: translateY(5px);
 }
 
-/*---------Banner----------*/
-.home .mk-bgimg {
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 0 40px 0;
-  /* height: 220px; */
-  height: 600px;
+.nango-content {
+  padding: 40px 0;
 }
+
+/*---------Banner----------*/
 
 .fuid-container.banner {
   position: relative;
-  margin-bottom: 5em;
 }
 
 .mk-bgimg {
@@ -271,61 +305,36 @@ a img:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 0 40px 0;
+  background-attachment: fixed;
   height: 500px;
   background-color: var(--the-lightblue);
+  filter: brightness(55%);
 }
 
-/* .ms-caption {
-    position: absolute;
-    z-index: 8;
-    top: 35%;
-} */
 .actual-bread {
   position: relative;
   z-index: 8;
   top: -14em !important;
   background: transparent;
   margin-bottom: -5em;
-  /* padding: 10px 0px 0 45px; */
 }
 
-.mk-page-title {
-  color: var(--the-black);
-  font-weight: 400;
+.ms-caption h1 {
+  color: var(--white);
+  font-size: 3em;
 }
 
-.breadcrumb,
+.breadcrumb {
+  color: var(--pink);
+}
+
 .breadcrumb a {
-  color: var(--the-black);
+  color: var(--white);
 }
 
 .ms-caption {
-  margin-bottom: -11em;
   position: absolute;
-  top: 50%;
-}
-
-.mk-page-title .dot {
-  position: relative;
-  top: -9px;
-}
-
-.mk-page-title .dot::after {
-  content: "";
-  background: var(--the-orange);
-  height: 9px;
-  width: 9px;
-  display: inline-block;
-  color: var(--the-orange);
-  position: absolute;
-  bottom: 6px;
-  left: 2px;
-}
-
-.mk-page-title {
-  font-size: 3.5em;
-  font-weight: 900;
+  top: 35%;
 }
 
 .breadcrumb {
@@ -334,33 +343,11 @@ a img:hover {
 
 .breadcrumb {
   position: relative;
-  top: 4em;
+  top: 3em;
   margin-bottom: 1.5em;
-  font-weight: 600;
   left: -15px;
+  font-size: 1.5em;
 }
-
-/*--------------------------*/
-
-/*for banner image*/
-
-.the-actual-img {
-  position: absolute;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 0 40px 0;
-  height: 500px;
-  width: 100%;
-  /* z-index: 9 !important; */
-  top: 35%;
-  right: 5%;
-}
-
-.mk-bgimg {
-  position: relative;
-}
-/*-----------*/
 
 /* **************************
       SLIDER
@@ -399,6 +386,7 @@ a img:hover {
   .caption-holder {
     width: 100%;
   }
+
   .caption-holder h1 {
     color: var(--white);
     font-size: 2em;
@@ -412,13 +400,20 @@ a img:hover {
   padding: 20px 60px;
   border-radius: 5px;
   font-size: 1.2em;
+  transition: 500ms;
+}
+
+.learn-more-btn a:hover {
+  background: var(--green);
+  color: var(--white);
 }
 
 #homeSlider .owl-nav.disabled {
   display: none;
 }
 
-#homeSlider::after {
+#homeSlider::after,
+.mk-bgimg::after {
   content: "";
   height: 6px;
   position: absolute;
@@ -449,7 +444,8 @@ a img:hover {
     rgba(5, 169, 220, 1) 90%,
     rgba(250, 186, 21, 1) 90%,
     rgba(250, 186, 21, 1) 100%
-  ); /* FF3.6-15 */
+  );
+  /* FF3.6-15 */
   background: -webkit-linear-gradient(
     left,
     rgba(95, 187, 60, 1) 0%,
@@ -472,7 +468,8 @@ a img:hover {
     rgba(5, 169, 220, 1) 90%,
     rgba(250, 186, 21, 1) 90%,
     rgba(250, 186, 21, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
+  );
+  /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to right,
     rgba(95, 187, 60, 1) 0%,
@@ -495,8 +492,10 @@ a img:hover {
     rgba(5, 169, 220, 1) 90%,
     rgba(250, 186, 21, 1) 90%,
     rgba(250, 186, 21, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8034', endColorstr='#2184cd',GradientType=1 ); /* IE6-9 */
+  );
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed8034', endColorstr='#2184cd', GradientType=1);
+  /* IE6-9 */
 }
 
 /* Sign Up */
@@ -605,6 +604,7 @@ a img:hover {
   -webkit-box-shadow: 0px 0px 3px 0px rgba(208, 208, 208, 0.7);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.7);
   border-radius: 7px 7px 0 0;
+  transition: 700ms ease-in-out;
 }
 
 .news-image img {
@@ -619,6 +619,19 @@ a img:hover {
 .news-title a {
   font-size: 1.5em;
   font-weight: 600;
+}
+
+.news-button a i {
+  transition: 700ms;
+}
+
+.news-holder:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.news-holder:hover i {
+  color: var(--white);
 }
 
 .news-title {
@@ -657,6 +670,15 @@ a img:hover {
   padding: 15px 60px;
   border-radius: 5px;
   font-size: 1.3em;
+  position: relative;
+  transition: 500ms ease-in-out;
+  border: 1px solid var(--green);
+}
+
+.btn a:hover {
+  border: 1px solid var(--green);
+  background: var(--white);
+  color: var(--green);
 }
 
 /* ****************************
@@ -677,6 +699,13 @@ a img:hover {
   padding: 20px;
   margin: 20px 0;
   background: var(--white);
+  position: relative;
+  transition: 500ms;
+}
+
+.we-wrapper:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 .we-wrapper h5 {
@@ -696,4 +725,85 @@ a img:hover {
 
 .news-cat {
   padding: 25px 10px 0;
+  transition: 700ms;
+}
+
+.news-holder:hover .news-cat a {
+  color: var(--white);
+}
+
+/*****************************
+        Contact Us
+**************************** */
+.b-right {
+  border-right: 2px solid var(--grey);
+  height: 400px;
+}
+
+.c-wrapper h2 {
+  color: var(--green);
+}
+
+.c-wrapper h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--green);
+  margin-bottom: 30px;
+}
+
+.c-wrapper p {
+  font-size: 1.5em;
+}
+
+.c-social-media a {
+  font-size: 1.5em;
+}
+
+.c-social-media a {
+  font-size: 1.5em;
+}
+
+.white-bg {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+/* Contact Form */
+
+.c-form {
+  padding: 80px;
+}
+
+@media (max-width: 768px) {
+  .c-form {
+    padding: 80px 0;
+  }
+
+  .b-right {
+    border: none;
+    height: auto;
+  }
+}
+
+.c-form label {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.c-form .wpcf7-form-control.wpcf7-text,
+.c-form .wpcf7-form-control.wpcf7-textarea {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--black);
+  padding: 15px;
+  margin-top: 0.8em;
+}
+
+.c-form .wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: var(--green);
+  color: var(--white);
+  border: navajowhite;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
 }

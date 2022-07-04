@@ -24,11 +24,11 @@
                 </div>
                 <div class="col-sm-12">
                     <div class="the-footer-menu">
-                        <div class="products">
-                            <h5>Products</h5>
+                        <div class="quick-links">
+                            <h5>Quick Links</h5>
                             <?php
                             $args = array(
-                                'theme_location' => 'products'
+                                'theme_location' => 'quick-links'
                             );
                             ?>
                             <?php wp_nav_menu($args); ?>
@@ -36,21 +36,21 @@
 
                         </div>
 
-                        <div class="company">
-                            <h5>Company</h5>
+                        <div class="what-do">
+                            <h5>What We Do</h5>
                             <?php
                             $args = array(
-                                'theme_location' => 'company'
+                                'theme_location' => 'What We Do Menu'
                             );
                             ?>
                             <?php wp_nav_menu($args); ?>
                         </div>
 
-                        <div class="legal">
-                            <h5>Legal</h5>
+                        <div class="related-links">
+                            <h5>Related Links</h5>
                             <?php
                             $args = array(
-                                'theme_location' => 'legal'
+                                'theme_location' => 'related-links'
                             );
                             ?>
                             <?php wp_nav_menu($args); ?>
@@ -64,12 +64,14 @@
 
 
         <div class="designed">
-            <div class="done-by">
-                <div class="copy-right-area">
-                    <p>Copyright &copy; <?php echo date("Y"); ?> Nango. All rights reserved. </p>
-                </div>
-                <div class="the-quatro">
-                    <p>Site by <a href="https://www.quatrohaus.com/">Quatrohaus</a></p>
+            <div class="container">
+                <div class="done-by">
+                    <div class="copy-right-area">
+                        <p>Copyright &copy; <?php echo date("Y"); ?> Nango. All rights reserved. </p>
+                    </div>
+                    <div class="the-quatro">
+                        <p>Site by <a href="https://www.quatrohaus.com/">Quatrohaus</a></p>
+                    </div>
                 </div>
             </div>
 

@@ -46,32 +46,6 @@ jQuery(document).ready(function ($) {
                 }
             }
         })
-
-        $('#thematicSectorSlider').owlCarousel({
-            loop: true,
-            autoplay: false,
-            dots: true,
-            items: 1,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 4
-                }
-            }
-        })
-        $('#productsSlider').owlCarousel({
-            loop: true,
-            autoplay: true,
-            dots: true,
-
-            items: 1,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1
-                }
-            }
-        })
         $('#testimonialSlider').owlCarousel({
             loop: true,
             dots: true,
@@ -87,6 +61,48 @@ jQuery(document).ready(function ($) {
                 }
             }
         })
+
+        $('#thematicSectorSlider').owlCarousel({
+            loop: true,
+            autoplay: true,
+            stopOnHover: true, // To stop sliding on hover.
+            slideTransition: 'linear',
+            autoplayTimeout: 5000,
+            autoplaySpeed: 5000,
+            autoplayHoverPause: true,
+            // slideSpeed: 200,
+            dots: true,
+            // navText: ["<button class='owl-prev'><i class='icon-back_icon'></i></button>", "<button class='owl-next'><i class='icon-next_icon'></i></button>"],
+            items: 1,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+
+
+        $('#productsSlider').owlCarousel({
+            loop: true,
+            autoplay: true,
+            dots: true,
+
+            items: 1,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+
     })
 
 
