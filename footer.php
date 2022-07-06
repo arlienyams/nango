@@ -40,7 +40,7 @@
                             <h5>What We Do</h5>
                             <?php
                             $args = array(
-                                'theme_location' => 'What We Do Menu'
+                                'theme_location' => 'what-we-do'
                             );
                             ?>
                             <?php wp_nav_menu($args); ?>

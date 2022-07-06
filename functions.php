@@ -274,7 +274,7 @@ function events_post_type()
 			),
 			'supports' => array(
 				'title',
-				//'thumbnail'
+				'thumbnail',
 				'custom-fields'
 			),
 			'menu_position' => 5,
@@ -321,7 +321,7 @@ function cptui_register_my_cpts_thematic_sector()
 		"hierarchical" => true,
 		"rewrite" => array("slug" => "thematic-sector", "with_front" => true),
 		"query_var" => true,
-		"supports" => array("title"),
+		"supports" => array("title", "thumbnail"),
 		"taxonomies" => array("thematic_sector_type"),
 		'menu_icon' => __('dashicons-businessperson'),
 	);

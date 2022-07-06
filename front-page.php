@@ -240,7 +240,7 @@
                                     </div>
                                     <div class="second-events-flex">
                                         <div class="events-t-tle">
-                                            <a href=""><?php the_title() ?></a>
+                                            <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
                                         </div>
                                         <div class="the-events-date">
                                             <p><?php the_field('event_date') ?></p>
@@ -267,35 +267,39 @@
         </div>
 
     </section>
-    <div class="container">
-        <div class="row">
-            <div class="share-links-are">
-                <a href="#" class="the-share-tag">
-                    <div class="the-share">
-                        <h5>Share</h5>
 
-                        <p>Spread the word about NANGO.</p>
-                    </div>
+    <section class="share-lnks">
+        <div class="container">
+            <div class="row">
+                <div class="share-links-are">
+                    <a href="#" class="the-share-tag">
+                        <div class="the-share">
+                            <h5>Share</h5>
 
-                </a>
-                <a href="#" class="the-faqs-tag">
-                    <div class="the-faqs">
-                        <h5>FAQs</h5>
-                        <p>We have the answers for you.</p>
-                    </div>
+                            <p>Spread the word about NANGO.</p>
+                        </div>
 
-                </a>
+                    </a>
+                    <a href="#" class="the-faqs-tag">
+                        <div class="the-faqs">
+                            <h5>FAQs</h5>
+                            <p>We have the answers for you.</p>
+                        </div>
 
-                <a href="#" class="the-whats-app-tag">
-                    <div class="the-whats-app">
-                        <h5>Whats App</h5>
-                        <p>Gt in touch on WhatsApp</p>
-                    </div>
-                </a>
+                    </a>
 
+                    <a href="#" class="the-whats-app-tag">
+                        <div class="the-whats-app">
+                            <h5>Whats App</h5>
+                            <p>Gt in touch on WhatsApp</p>
+                        </div>
+                    </a>
+
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <section class="testimonial">
 
