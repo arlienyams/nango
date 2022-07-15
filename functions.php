@@ -45,6 +45,7 @@ add_action('after_setup_theme', 'nango_resources');
  ************************************/
 function nango_scripts()
 {
+	wp_enqueue_style('aos-css', get_template_directory_uri() . '/css/aos.scss');
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style('nango-steel-css', get_template_directory_uri() . '/css/nango.css');
 	wp_enqueue_style('nango-secondary-css', get_template_directory_uri() . '/css/secondary.css');
@@ -52,7 +53,7 @@ function nango_scripts()
 	wp_enqueue_style('slider-css', get_template_directory_uri() . '/css/owl.carousel.min.css');
 	wp_enqueue_style('navigation-main-css', get_template_directory_uri() . '/css/navigation-main.css', false, '1', 'all');
 
-
+	wp_enqueue_script('aos-js', get_theme_file_uri() . '/js/aos.js');
 	wp_enqueue_script('jquery-bootstrap', get_theme_file_uri() . '/js/jquery-3.4.1.slim.min.js');
 	wp_enqueue_script('popper-js', get_theme_file_uri() . '/js/popper.min.js');
 	wp_enqueue_script('bootstrap-js', get_theme_file_uri() . '/js/bootstrap.min.js');
@@ -73,6 +74,8 @@ register_nav_menus(array(
 	'secondary' => __('Secondary Menu'),
 	'what-we-do' => __('What We Do Menu'),
 	'quick-links' => __('Quick Links Menu'),
+	'united-nations-agencies' => __('United Nations Agencies Menu'),
+	'technical-partners' => __('Technical Partners Menu'),
 	'related-links' => __('Related Links Menu'),
 ));
 
@@ -115,6 +118,42 @@ function get_breadcrumb()
 		echo '</em>"';
 	}
 }
+
+
+
+/************************************
+	Pagination
+ ************************************/
+function pagination($pages = '', $range = 4)
+{
+	$showitems = ($range * 2) + 1;
+	global $paged;
+	if (empty($paged)) $paged = 1;
+	if ($pages == '') {
+		global $wp_query;
+		$pages = $wp_query->max_num_pages;
+
+		if (!$pages) {
+			$pages = 1;
+		}
+	}
+	if (1 != $pages) {
+		echo "<div class=\"pagination\"><span>Page " . $paged . " of " . $pages . "</span>";
+		if ($paged > 2 && $paged > $range + 1 && $showitems < $pages) echo "<a href='" . get_pagenum_link(1) . "'>&laquo; First</a>";
+		if ($paged > 1 && $showitems < $pages) echo "<a href='" . get_pagenum_link($paged - 1) . "'>&lsaquo; Previous</a>";
+
+		for ($i = 1; $i <= $pages; $i++) {
+			if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+				echo ($paged == $i) ? "<span class=\"current\">" . $i . "</span>" : "<a href='" . get_pagenum_link($i) . "' class=\"inactive\">" . $i . "</a>";
+			}
+		}
+		if ($paged < $pages && $showitems < $pages) echo "<a href=\"" . get_pagenum_link($paged + 1) . "\">Next &rsaquo;</a>";
+		if ($paged < $pages - 1 &&  $paged + $range - 1 < $pages && $showitems < $pages) echo "<a href='" . get_pagenum_link($pages) . "'>Last &raquo;</a>";
+		echo "</div>\n";
+	}
+}
+
+
 
 
 
@@ -173,10 +212,11 @@ function we_do_post_type()
 			'rewrite' => array(
 				'slug' => 'what-we-do'
 			),
+			'show_in_rest' => true,
 			'supports' => array(
 				//'title',
-				//'thumbnail'
-				// 'custom-fields'
+				'thumbnail',
+				'editor', 'title', 'revisions', 'custom-fields',
 			),
 			'menu_position' => 5,
 			'menu_icon' => __('dashicons-editor-expand')
@@ -286,6 +326,76 @@ add_action('init', 'events_post_type');
 
 
 /************************************
+	Publications Post Type
+ ************************************/
+function publications_post_type()
+{
+	register_post_type(
+		'publications',
+		array(
+			'labels' => array(
+				'name' => __('Publications'),
+				'singular_name' => __('Publications'),
+				'add_new_item' => 'Add New Publication',
+				'add_new' => __('Add New Publication'),
+				'attributes' => __('Publication Attributes', 'text_domain'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'publications'
+			),
+			'supports' => array(
+				'title',
+				'thumbnail',
+				'custom-fields'
+			),
+			'menu_position' => 5,
+			'menu_icon' => __('dashicons-book-alt')
+		)
+	);
+}
+add_action('init', 'publications_post_type');
+
+
+
+function cptui_register_my_pub_cat()
+{
+
+	/**
+	 * Taxonomy: Publications Categories.
+	 */
+
+	$labels = array(
+		"name" => __("Categories", "custom-post-type-ui"),
+		"singular_name" => __("category", "custom-post-type-ui"),
+	);
+
+	$args = array(
+		"label" => __("Categories", "custom-post-type-ui"),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array('slug' => 'publication-categories', 'with_front' => true,),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "publication-categories",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+	);
+	register_taxonomy("publication-categories", array("publications"), $args);
+}
+add_action('init', 'cptui_register_my_pub_cat');
+
+
+
+
+/************************************
 	Thematic Sector Post Type
  ************************************/
 
@@ -369,12 +479,14 @@ add_action('init', 'cptui_register_my_taxes');
 
 
 /*------------Testimonials----------------*/
-function testimonial_post_type() {
-	register_post_type( 'testimonial',
+function testimonial_post_type()
+{
+	register_post_type(
+		'testimonial',
 		array(
 			'labels' => array(
-				'name' => __( 'Testimonials' ),
-				'singular_name' => __( 'Testimonial' ),
+				'name' => __('Testimonials'),
+				'singular_name' => __('Testimonial'),
 				'add_new_item' => 'Add Testimonial',
 				'add_new' => __('Add Testimonial')
 			),
@@ -391,4 +503,4 @@ function testimonial_post_type() {
 		)
 	);
 }
-add_action( 'init', 'testimonial_post_type' );
+add_action('init', 'testimonial_post_type');

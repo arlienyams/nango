@@ -6,7 +6,7 @@
 
     <section class="white-bg">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <div class="col-md-6">
                     <div class="c-wrapper b-right">
                         <h2>Get Help?</h2>
@@ -55,7 +55,7 @@
     </section>
 
     <section class="c-form">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h2>Get In Touch</h2>
             <?php echo do_shortcode('[contact-form-7 id="114" title="Get In Touch"]'); ?>
         </div>

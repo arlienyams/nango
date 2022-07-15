@@ -2,18 +2,18 @@
 
 <div class="the-body-content">
 
-    <?php if(have_posts()) :
-    
-    while(have_posts()) : the_post(); ?>
+    <?php if (have_posts()) :
 
-    <?php the_content(); ?>
+        while (have_posts()) : the_post(); ?>
 
-    <?php endwhile; ?>
+            <?php the_content(); ?>
 
-    <?php wp_reset_postdata(); ?>
+        <?php endwhile; ?>
 
-    <?php else: ?>
-    <p>Sorry there is no content on this page</p>
+        <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+        <p>Sorry there is no content on this page</p>
 
     <?php endif; ?>
 </div>

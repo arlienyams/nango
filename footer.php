@@ -48,9 +48,17 @@
 
                         <div class="related-links">
                             <h5>Related Links</h5>
+                            <p>United Nations Agencies</p>
                             <?php
                             $args = array(
-                                'theme_location' => 'related-links'
+                                'theme_location' => 'united-nations-agencies'
+                            );
+                            ?>
+                            <?php wp_nav_menu($args); ?>
+                            <p>Technical Partners</p>
+                            <?php
+                            $args = array(
+                                'theme_location' => 'united-nations-agencies'
                             );
                             ?>
                             <?php wp_nav_menu($args); ?>
@@ -118,7 +126,11 @@
         })
     })
     console.log()
+</script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </body>
