@@ -49,7 +49,7 @@
   content: "";
   position: absolute;
   background: var(--white);
-  width: 376px;
+  width: 100%;
   height: 210px;
   left: 0px;
   top: 0px;
@@ -398,6 +398,15 @@
 /**/
 
 /*Footer Code*/
+
+.the-footer-menu li {
+  margin-left: 0px;
+}
+
+.the-footer-menu li::before {
+  display: none;
+}
+
 .the-em {
   height: 3em;
   padding: 25px;
