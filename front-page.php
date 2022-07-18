@@ -18,7 +18,7 @@
             <?php if ($the_query->have_posts()) : ?>
                 <div class="row">
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="col-md-3">
+                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
                             <div class="news-holder" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                                 <div class="news-image">
                                     <a href=" <?php the_permalink() ?>" class="pg-image"> <?php the_post_thumbnail(); ?></a>
@@ -103,7 +103,7 @@
             <?php if ($the_query->have_posts()) : ?>
                 <div class="row">
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="col-md-3">
+                        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3">
                             <div class="news-holder" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                                 <div class="news-image">
                                     <a href=" <?php the_permalink() ?>" class="pg-image"> <?php the_post_thumbnail(); ?></a>
@@ -270,34 +270,44 @@
 
     <section class="share-lnks">
         <div class="container">
-            <div class="row">
-                <div class="share-links-are">
+            <div class="row share-links-are">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <a href="#" class="the-share-tag" data-aos="zoom-out">
-                        <div class="the-share">
-                            <h5>Share</h5>
+                        <div class="qk-links">
+                            <div class="the-share">
+                                <h5>Share</h5>
 
-                            <p>Spread the word about NANGO.</p>
-                        </div>
+                                <p>Spread the word about NANGO.</p>
+                            </div>
 
-                    </a>
-                    <a href="#" class="the-faqs-tag" data-aos="zoom-out" data-aos-delay="50">
-                        <div class="the-faqs">
-                            <h5>FAQs</h5>
-                            <p>We have the answers for you.</p>
-                        </div>
-
-                    </a>
-
-                    <a href="#" class="the-whats-app-tag" data-aos="zoom-out" data-aos-delay="100">
-                        <div class="the-whats-app">
-                            <h5>Whats App</h5>
-                            <p>Get in touch on WhatsApp</p>
                         </div>
                     </a>
 
                 </div>
-            </div>
-        </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <a href="#" class="the-faqs-tag" data-aos="zoom-out" data-aos-delay="50">
+                        <div class="qk-links">
+
+                            <div class="the-faqs">
+                                <h5>FAQs</h5>
+
+                                <p>We have the answers for you.</p>
+                            </div>
+
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <a href="#" class="the-whats-app-tag" data-aos="zoom-out" data-aos-delay="100">
+                        <div class="qk-links">
+                            <div class="the-whats-app">
+                                <h5>Whats App</h5>
+                                <p>Get in touch on WhatsApp</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
     </section>
 
 
@@ -306,11 +316,11 @@
         <div class="container-fluid testimonials">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-7">
+                    <div class="col-sm-12 col-md-6 col-lg-7 col-xl-7">
                         <h2 data-aos="zoom-in">Testimonials</h2>
                     </div>
 
-                    <div class="col-sm-12 col-md-9" data-aos="fade-right" data-aos-easing="ease-in-sine">
+                    <div class="col-sm-12 col-md-7 col-lg-8 col-xl-9" data-aos="fade-right" data-aos-easing="ease-in-sine">
 
                         <?php
                         $args = array(
@@ -350,7 +360,7 @@
 
                     </div>
 
-                    <div class="col-sm-12 col-md-3" data-aos="fade-left" data-aos-easing="ease-in-sine">
+                    <div class="col-sm-12 col-md-5 col-lg-4 col-xl-3" data-aos="fade-left" data-aos-easing="ease-in-sine">
                         <div class="the-feeds">
                             <p><a class="twitter-timeline" href="https://twitter.com/nangozimbabwe" data-width="320" data-height="520" data-theme="light" data-link-color="#2B7BB9"></a></p>
                             <script charset="utf-8" type="text/javascript" src="//platform.twitter.com/widgets.js"></script>

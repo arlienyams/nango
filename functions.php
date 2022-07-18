@@ -72,6 +72,7 @@ add_action('wp_enqueue_scripts', 'nango_scripts');
 register_nav_menus(array(
 	'primary' => __('Primary Menu'),
 	'secondary' => __('Secondary Menu'),
+	'mobile' => __('Mobile Menu'),
 	'what-we-do' => __('What We Do Menu'),
 	'quick-links' => __('Quick Links Menu'),
 	'united-nations-agencies' => __('United Nations Agencies Menu'),

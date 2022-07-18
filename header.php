@@ -27,10 +27,18 @@
                 <div class="the-menus">
                     <div class="the-secondary-menu">
                         <div class="secondary-wrapper">
-                            <nav>
+                            <nav class="desktop-menu">
                                 <?php
                                 wp_nav_menu(array(
                                     'theme_location' => 'secondary',
+                                    'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
+                                ));
+                                ?>
+                            </nav>
+                            <nav class="mobile-menu">
+                                <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'mobile',
                                     'menu_class' => 'site-menu clone-main-nav d-none d-lg-block',
                                 ));
                                 ?>
@@ -39,7 +47,7 @@
 
                     </div>
                     <div class="the-primary-menu">
-                        <nav>
+                        <nav class="desktop-menu">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
